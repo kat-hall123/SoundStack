@@ -36,7 +36,7 @@ function formatDate(d) {
 }
 
 export default async function PostDetailPage({ params }) {
-  const { id } = await params;
+  const { id } = params;
   const post = await getPost(id);
   if (!post) notFound();
   const comments = await getComments(id);
